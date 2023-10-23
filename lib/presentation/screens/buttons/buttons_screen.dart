@@ -27,6 +27,7 @@ class _ButtonsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
     return SizedBox(
       width: double.infinity,
       child: Padding(
@@ -37,7 +38,23 @@ class _ButtonsView extends StatelessWidget {
           children: [
             ElevatedButton(onPressed: (){}, child: const Text('Elevated Button')),
             const ElevatedButton(onPressed: null, child: Text('Elevated Disabled')),
-            ElevatedButton.icon(onPressed: (){}, icon: const Icon(Icons.access_alarm_rounded), label: const Text('Elevated Icon'))
+            ElevatedButton.icon(onPressed: (){}, icon: const Icon(Icons.access_alarm_rounded), label: const Text('Elevated Icon')),
+            FilledButton(onPressed: (){}, child: const Text('Filled')),
+            FilledButton.icon(onPressed: (){}, icon: const Icon(Icons.accessibility),label: const Text('Filled Icon'),),
+            OutlinedButton(onPressed: (){}, child: const Text('Outlined')),
+            OutlinedButton.icon(onPressed: (){}, icon: const Icon(Icons.terminal), label: const Text('Outline Icon')),
+            TextButton(onPressed: (){}, child: const Text('Text')),
+            TextButton.icon(onPressed: (){}, icon: const Icon(Icons.account_box_sharp),label: const Text('Text Icon')),
+            //TODO: custom button
+
+            IconButton(
+              onPressed: (){},
+              icon: const Icon(Icons.app_registration_rounded),
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(colors.primary),
+                iconColor: const MaterialStatePropertyAll(Colors.white),
+              )
+            )
           ],
         ),
       ),
