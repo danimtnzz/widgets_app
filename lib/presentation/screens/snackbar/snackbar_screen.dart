@@ -38,6 +38,7 @@ class SnackbarScreen extends StatelessWidget {
 
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             FilledButton.tonal(onPressed: (){
               showAboutDialog(
@@ -48,6 +49,7 @@ class SnackbarScreen extends StatelessWidget {
               );
             },
             child: const Text('Licencias Usadas')),
+            const SizedBox(height: 5,),
             FilledButton.tonal(onPressed: () => openDialog(context),
             child: const Text('Mostrar diálogo')),
           ],
