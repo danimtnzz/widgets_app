@@ -10,3 +10,23 @@ final colorListProvider = Provider((ref) => colorList);
 
 //un simple entero
 final selectedColorProvider = StateProvider((ref) => 0);
+
+//Un objeto de tipo AppTheme
+final themeNotifierProvider = StateNotifierProvider<ThemeNotifier, AppTheme>(
+  (ref) => ThemeNotifier(),
+);
+
+//controller o notifier
+class ThemeNotifier extends StateNotifier<AppTheme>{
+  //STATE=Estado = new AppTheme();
+  // ThemeNotifier(super.state);
+  ThemeNotifier(): super(AppTheme());
+  
+  void toggleDarkMode(){
+
+  }
+  void changeColorIndex(int colorIndex){
+
+  }
+
+}
